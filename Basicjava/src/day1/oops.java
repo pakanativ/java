@@ -1,5 +1,7 @@
 package day1;
 
+import java.util.Arrays;
+
 public class oops {
 private int width;     //member variables or instances
 private int height;
@@ -42,7 +44,26 @@ public void getValues(){
 }
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
+		oops oops1 = new oops("box1");
+		oops1.setWidth(10);
+		oops1.setHeight(20);
+		oops1.setWidth(10);
+		oops1.getValue("height");
+		oops1.getValue("width");
+		oops1.getValue("depth");
+		System.out.println();
+		oops oops2=new oops("oops2");
+		oops2.setValues(100,200,50);
+		oops2.getValue();
+		oops oops3=new oops("oops3");
+		oops3.getValue();
+		oops oops4=oops3;
+		oops4.setHeight(5);
+		System.out.println(oops4.objName+"="+ Arrays.toString(oops4.getValue()));
+		System.out.println("in oops4");
+		oops4.getValue("height");
+		System.out.println("In oops3");
+		oops3.getValue("height");
 	}
 
 }
